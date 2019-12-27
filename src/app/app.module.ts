@@ -21,6 +21,10 @@ import { OurMissionComponent } from './components/our-mission/our-mission.compon
 import { OurTeamComponent } from './components/our-team/our-team.component';
 import { FeaturedCauseComponent } from './components/featured-cause/featured-cause.component';
 import { ContactInfoComponent } from './components/contact-info/contact-info.component';
+import { AdminComponent } from './tests/admin/admin.component';
+import { CatalogComponent } from './tests/catalog/catalog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -42,11 +46,19 @@ import { ContactInfoComponent } from './components/contact-info/contact-info.com
     OurMissionComponent,
     OurTeamComponent,
     FeaturedCauseComponent,
-    ContactInfoComponent
+    ContactInfoComponent,
+    AdminComponent,
+    CatalogComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
+    FilterPipe
   ],
   providers: [],
   bootstrap: [AppComponent]
