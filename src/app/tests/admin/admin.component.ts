@@ -20,9 +20,8 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
   onAdd() {
-    const item = {...this.products};
-    if (item.category != null || item.description != null || item.name != null || item.price != null || item.id != null) {
-      // this.uniqueId();
+    const item = { ...this.products };
+    if (item.category != null || item.description != null || item.name != null || item.price != null) {
       item.id = Math.random().toString(16).substr(2, 6);
       this.service.addProducts({ ...item });
       console.log(this.products);

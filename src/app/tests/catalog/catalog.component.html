@@ -1,27 +1,37 @@
-<div>
-  <div class="search-hero">
+<div class="main" style="height: 100vh; background-color: darksalmon;">
+  <!-- <div class="search-hero">
     <input class="formControl" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+  </div> -->
+  <div class="admin">
+    <button routerLink="/">
+      admin
+    </button>
   </div>
-  <button routerLink="/">
-    admin
-  </button>
-  <table>
-    <tr>
-      <th>Product Id</th>
-      <th>Product Name</th>
-      <th>Product Category</th>
-      <th>Product Description</th>
-      <th>Product Price</th>
-    </tr>
-    <ng-container *ngFor="let product of products; let i of index | filter : searchText">
+  <div align="center">
+    <table style="width: 80%;">
       <tr>
-        <td>{{ product.id }}</td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.category }}</td>
-        <td>{{ product.description }}</td>
-        <td>{{ product.price }}</td>
-        <td><button (click)="onDelete(i, product)">delete</button></td>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Category</th>
+        <th>Product Description</th>
+        <th>Product Price</th>
+        <th>Action</th>
       </tr>
-    </ng-container>
-  </table>
+      <ng-container
+        *ngFor="let product of products; let i; of: index | filter: searchText"
+      >
+        <tr align="center">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td><button (click)="onDelete(i, product)">delete</button></td>
+        </tr>
+      </ng-container>
+      <tr align="right">
+        <td colspan="6" style="padding:0 30px 0 0;">Total Price: {{ totalAmount }}</td>
+      </tr>
+    </table>
+  </div>
 </div>

@@ -1,6 +1,10 @@
 <section>
+  <div align="right">
+    <button routerLink="/catalog">catalog</button>
+      </div>
   <form #productsForm="ngForm" autocomplete="off">
-    <div align="center">
+    <div  align="center">
+    <div class="card">
       <h3>Product Name:</h3>
       <input type="text" [(ngModel)]="products.name" name="products_name" placeholder="enter name.." >
       <br>
@@ -8,32 +12,32 @@
       <input type="number" [(ngModel)]="products.price" name="products_price" placeholder="price..">
       <br>
       <h3>Product description:</h3>
-      <textarea type="text" [(ngModel)]="products.description" name="products_description" placeholder="enter name.."></textarea>
+      <textarea type="text" [(ngModel)]="products.description" name="products_description" placeholder="enter description.."></textarea>
       <br>
       <h3>Product category:</h3>
       <select
       name="product_category"
       [(ngModel)]="products.category"
       required
-  >
+       >
       <option disabled selected value="undefined">Select category*</option>
 
       <option value="Large"> Large </option>
       <option value="Medium"> Medium </option>
       <option value="Small"> Small </option>
 
-  </select>
+      </select>
       <br>
+      <div class="add">
+        <button (click)="onAdd()">Add</button>
+        <button (click)="onReset()">Reset</button>
+      </div>
     </div>
 
-    <div>
-      <button (click)="onAdd()">Add</button>
-      <button (click)="onReset()">Reset</button>
-    </div>
+    
+  </div>
   </form>
   
-  <div>
-<button routerLink="/catalog">catalog</button>
-  </div>
+  
   
 </section>

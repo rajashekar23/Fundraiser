@@ -1,0 +1,39 @@
+table{
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin: 30px 30px;
+    /* max-width: 360px; */
+    /* height: 450px; */
+    /* padding: 20px; */
+}
+.admin button{
+    margin: 20px;
+    padding:10px;
+    color: white;
+    background-color: darkolivegreen;
+    border: none;
+    border-radius: 3px;
+
+}
+table tr:nth-child(even) {
+    background-color: rgb(238, 238, 238);
+  }
+  table tr:nth-child(odd) {
+   background-color: rgb(211, 229, 238);
+  }
+table th{
+    background-color: #8e98ad;
+    padding: 10px;
+    color: white;
+}
+
+button{
+    background-color: darkslategray;
+    margin: 20px;
+    padding:10px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+
+}
