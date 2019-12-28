@@ -4,7 +4,7 @@
   </div> -->
   <div class="admin">
     <button routerLink="/">
-      admin
+      Admin
     </button>
   </div>
   <div align="center">
@@ -22,11 +22,11 @@
       >
         <tr align="center">
           <td>{{ product.id }}</td>
-          <td>{{ product.name }}</td>
+          <td>{{ product.name | titlecase }}</td>
           <td>{{ product.category }}</td>
           <td>{{ product.description }}</td>
           <td>{{ product.price }}</td>
-          <td><button (click)="onDelete(i, product)">delete</button></td>
+          <td><button (click)="onDelete(i, product)">Delete</button></td>
         </tr>
       </ng-container>
       <tr align="right">
