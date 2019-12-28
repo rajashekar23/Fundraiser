@@ -22,6 +22,7 @@ export class CatalogComponent implements OnInit {
   }
   onDelete(index: number, product: any) {
     this.products.splice(this.products.indexOf(index), 1);
+    localStorage.setItem('products', JSON.stringify(this.products));
     this.totalAmount -= product.price;
     console.log(this.totalAmount);
   }
