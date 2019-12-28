@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    margin: 0;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    width: 100%;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
+    font-family: lato, sans-serif, Arial, Helvetica;
+    min-width: 350px;
+    /* background: #293949; */
+}

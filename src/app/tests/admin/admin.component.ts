@@ -23,7 +23,7 @@ export class AdminComponent implements OnInit {
     const item = { ...this.products };
     if (item.category != null || item.description != null || item.name != null || item.price != null) {
       item.id = Math.random().toString(16).substr(2, 6);
-      this.service.addProducts({ ...item });
+      this.service.addProducts(item);
       console.log(this.products);
       this.productsForm.reset();
 

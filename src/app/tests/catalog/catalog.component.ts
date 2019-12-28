@@ -11,7 +11,7 @@ export class CatalogComponent implements OnInit {
   products: Array<any> = [];
   totalAmount = 0;
   constructor(private service: AdminService) {
-    this.products = this.service.getProducts();
+    this.products = JSON.parse(localStorage.getItem('products'));
   }
 
   ngOnInit() {
