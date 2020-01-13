@@ -25,6 +25,9 @@ import { AdminComponent } from './tests/admin/admin.component';
 import { CatalogComponent } from './tests/catalog/catalog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { GoogleChartsModule } from 'angular-google-charts';
+import { ChartComponent } from './tests/google-charts/chart/chart.component';
+import { ComboChartsComponent } from './tests/combo-charts/combo-charts.component';
 
 @NgModule({
   declarations: [
@@ -49,13 +52,16 @@ import { FilterPipe } from './filter.pipe';
     ContactInfoComponent,
     AdminComponent,
     CatalogComponent,
-    FilterPipe
+    FilterPipe,
+    ChartComponent,
+    ComboChartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    GoogleChartsModule
   ],
   exports: [
     FilterPipe

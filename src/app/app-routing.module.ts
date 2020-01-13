@@ -7,9 +7,13 @@ import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AdminComponent } from './tests/admin/admin.component';
 import { CatalogComponent } from './tests/catalog/catalog.component';
+import { ChartComponent } from './tests/google-charts/chart/chart.component';
+import { ComboChartsComponent } from './tests/combo-charts/combo-charts.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent },
+  { path: '', component: ChartComponent},
+  { path: 'comboChart', component: ComboChartsComponent},
+  { path: 'admin', component: AdminComponent },
   { path: 'catalog', component: CatalogComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'aboutus', component: AboutUsComponent },
