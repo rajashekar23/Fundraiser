@@ -28,6 +28,7 @@ import { FilterPipe } from './filter.pipe';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { ChartComponent } from './tests/google-charts/chart/chart.component';
 import { ComboChartsComponent } from './tests/combo-charts/combo-charts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ComboChartsComponent } from './tests/combo-charts/combo-charts.componen
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    HttpClientModule
   ],
   exports: [
     FilterPipe

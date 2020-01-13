@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-chart',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
-
-  constructor() { }
+  constructor(private httpService: HttpClient) { }
   title = 'Browser market shares at a specific website, 2014';
   type = 'PieChart';
   data = [
@@ -24,6 +24,11 @@ export class ChartComponent implements OnInit {
   width = 550;
   height = 400;
   ngOnInit() {
+    this.httpService.get('./assets/json/charts.json').subscribe(data => {
+      console.log(data);
+      // this.p = data['pieData'],
+      // this.p1 = data['pieData1']
+    });
   }
 
 }

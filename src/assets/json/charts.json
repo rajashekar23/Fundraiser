@@ -1,0 +1,8 @@
+{
+    "pieData": ["Firefox", 45.0],
+    "pieData1": ["IE", 26.8],
+    "pieData2": ["Chrome", 12.8],
+    "pieData3": ["Safari", 8.5],
+    "pieData4":["Opera", 6.2],
+    "pieData5": ["Others", 0.7]
+}
