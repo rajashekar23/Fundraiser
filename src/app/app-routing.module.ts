@@ -11,9 +11,9 @@ import { ChartComponent } from './tests/google-charts/chart/chart.component';
 import { ComboChartsComponent } from './tests/combo-charts/combo-charts.component';
 
 const routes: Routes = [
-  { path: '', component: ChartComponent},
+  // { path: '', component: ChartComponent},
   { path: 'comboChart', component: ComboChartsComponent},
-  { path: 'admin', component: AdminComponent },
+  { path: '', component: AdminComponent },
   { path: 'catalog', component: CatalogComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'aboutus', component: AboutUsComponent },
